@@ -1,10 +1,10 @@
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
+// import Form from 'react-bootstrap/Form';
+// import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar'; 
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import { useState } from 'react';
+// import NavDropdown from 'react-bootstrap/NavDropdown';
+// import { useState } from 'react';
 import './Header.css';
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -15,7 +15,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 
 function NavScrollExample() {
 
-  const [value, setValue] = useState('');
+  // const [value, setValue] = useState('');
 
   // const { loading, data } = useGetData({value});
   

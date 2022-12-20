@@ -1,17 +1,17 @@
-import axios from 'axios';
-import React, { useState, useEffect } from 'react';
+// import axios from 'axios';
+import React, { useState } from 'react';
 import NewsCard from "../../components/NewsCard/NewsCard";
 import ReactPaginate, { bootstrap5PaginationPreset } from 'react-responsive-pagination'; 
 import useGetData from '../../useGetData';
 import '../../App.css';
-import Header from '../../components/Header'
-import Button from 'react-bootstrap/Button';
+// import Header from '../../components/Header'
+// import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
+// import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Offcanvas from 'react-bootstrap/Offcanvas';
+// import NavDropdown from 'react-bootstrap/NavDropdown';
+// import Offcanvas from 'react-bootstrap/Offcanvas';
  
 const HomePage=()=>{
     
@@ -20,11 +20,11 @@ const HomePage=()=>{
     // const [totalPages, setTotalPages]=useState(0);
     const [currentPage,setCurrentPage]=useState(0);
     const [sort_by, setValue] = useState('popularity');
-    const [time, setTime] = useState('');
+    // const [time, setTime] = useState('');
     const [tag, setTag] = useState('story');
     const [query,setQuery]=useState('');
 
-    const {totalPages, data, isLoading}=useGetData({sort_by,time,tag,query,currentPage});
+    const {totalPages, data, isLoading}=useGetData({sort_by,tag,query,currentPage});
     console.log(data)
  
     const handlePageChange = (event)=>{

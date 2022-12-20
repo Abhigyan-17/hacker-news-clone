@@ -5,7 +5,7 @@ const useGetData = ({sort_by,time,tag,query, currentPage}) => {
     const [data, setData] = useState([]);
    
     // const [isLoading, setIsLoading] = useState(false);
-    const [stories, setStories] = useState([])
+    // const [stories, setStories] = useState([])
     const [isLoading,setIsLoading]=useState(0);
     const [totalPages,setTotalPages]=useState(10);
     //console.log(query);
