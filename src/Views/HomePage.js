@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import NewsCard from "../components/Cards/NewsCard";
 import CommentCard from '../components/Cards/CommentCard';
 import ReactPaginate, { bootstrap5PaginationPreset } from 'react-responsive-pagination'; 
-import useGetData from '../useGetData';
+import useGetData from '../utils/useGetData';
 import '../App.css';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
