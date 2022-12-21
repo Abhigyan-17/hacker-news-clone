@@ -1,22 +1,17 @@
 import { useState,useEffect } from "react";
 import axios from 'axios';
-const useGetData = ({sort_by,time,tag,query, currentPage}) => {
+const useGetData = ({sort_by,tag,query, currentPage}) => {
    
     const [data, setData] = useState([]);
    
-    // const [isLoading, setIsLoading] = useState(false);
-    // const [stories, setStories] = useState([])
     const [isLoading,setIsLoading]=useState(0);
-    const [totalPages,setTotalPages]=useState(10);
-    //console.log(query);
+    const [totalPages,setTotalPages]=useState(0);
     const filters = {
         date: '_by_date',
         popularity: '',
     }
    
     const url = `https://hn.algolia.com/api/v1/search${filters[sort_by]}?query=${query}&tags=${tag}`;
- 
-   
  
     useEffect(() => {
         setIsLoading(true);
@@ -28,7 +23,6 @@ const useGetData = ({sort_by,time,tag,query, currentPage}) => {
                 }
                 );
                 const {hits,nbPages}=data;
-                // setStories(hits);
                 setData(hits);
                 setTotalPages(nbPages);
             }
@@ -43,11 +37,10 @@ const useGetData = ({sort_by,time,tag,query, currentPage}) => {
     }, [currentPage,url])
  
     return {
-       isLoading,
+        isLoading,
         data,
         totalPages
     }
 }
-export default useGetData;
- 
 
+export default useGetData;

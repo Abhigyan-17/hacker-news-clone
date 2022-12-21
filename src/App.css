@@ -32,3 +32,10 @@
   background-color: #ccc;
   color:#fff;
 }
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: rgba(255, 149, 0, 0.93);
+  border-color:rgb(227, 136, 16);
+}
+
